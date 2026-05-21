@@ -179,6 +179,19 @@ const LINKS = [
 
 const STORAGE_KEY = 'matsuyama_u_link_click_counts';
 const ALL_TAG = 'すべて';
+const TAG_EMOJI = {
+  授業: '📘',
+  履修: '📝',
+  メール: '📧',
+  AI: '🤖',
+  会議: '🎥',
+  ファイル: '📁',
+  ネットワーク: '📶',
+  サポート: '🛟',
+  セキュリティ: '🔐',
+  公式: '🏫',
+  図書館: '📚'
+};
 
 const gridEl = document.getElementById('links-grid');
 const tagFilterEl = document.getElementById('tag-filter');
@@ -238,6 +251,10 @@ function createBadge(className, text) {
   return span;
 }
 
+function getEmojiForLink(link) {
+  return TAG_EMOJI[link.tags[0]] || '🔗';
+}
+
 function renderCards() {
   const filteredLinks = LINKS
     .filter((link) => activeTag === ALL_TAG || link.tags.includes(activeTag))
@@ -269,7 +286,7 @@ function renderCards() {
     anchor.href = link.url;
     anchor.target = '_blank';
     anchor.rel = 'noopener noreferrer';
-    anchor.textContent = link.title;
+    anchor.textContent = `${getEmojiForLink(link)} ${link.title}`;
     anchor.addEventListener('click', () => {
       incrementCount(link.id);
       renderCards();
