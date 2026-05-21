@@ -87,19 +87,7 @@ a {
 main {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1.5rem 1rem 3rem;
-}
-
-.section-header {
-  margin-bottom: 1rem;
-  padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--color-primary);
-}
-
-.section-title {
-  font-size: 1.15rem;
-  font-weight: 700;
-  color: var(--color-primary);
+  padding: 0.75rem 1rem 3rem;
 }
 
 .controls {
@@ -153,12 +141,6 @@ main {
 .reset-button:focus-visible {
   color: var(--color-primary);
   border-color: var(--color-primary);
-}
-
-.list-note {
-  color: var(--color-text-muted);
-  font-size: 0.8rem;
-  margin-bottom: 0.75rem;
 }
 
 .card-grid {
@@ -342,7 +324,7 @@ main {
   }
 
   main {
-    padding: 2rem 1.5rem 3rem;
+    padding: 1rem 1.5rem 3rem;
   }
 }
 
