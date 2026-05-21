@@ -5,7 +5,7 @@ const LINKS = [
     url: 'https://moodle4.matsuyama-u.ac.jp/moodle/',
     desc: '授業資料・課題提出・小テスト・出欠確認',
     account: { label: '学籍番号', className: 'badge-gakusei' },
-    tags: ['授業', '課題', '学習管理']
+    tags: ['授業']
   },
   {
     id: 'unipa-pc',
@@ -13,7 +13,7 @@ const LINKS = [
     url: 'https://unipa.matsuyama-u.ac.jp/uprx/ShibbolethAuthServlet',
     desc: '履修登録・成績照会・時間割確認（パソコン用）',
     account: { label: '学籍番号', className: 'badge-gakusei' },
-    tags: ['履修', '成績', '掲示板']
+    tags: ['履修']
   },
   {
     id: 'unipa-mobile',
@@ -21,7 +21,7 @@ const LINKS = [
     url: 'https://unipa.matsuyama-u.ac.jp/uprx/MobileShibbolethAuthServle',
     desc: '履修登録・成績照会・時間割確認（スマートフォン用）',
     account: { label: '学籍番号', className: 'badge-gakusei' },
-    tags: ['履修', '成績', '掲示板', 'スマホ']
+    tags: ['履修']
   },
   {
     id: 'gmail',
@@ -37,7 +37,7 @@ const LINKS = [
     url: 'https://classroom.google.com/',
     desc: '授業ごとの資料配布・課題提出・連絡',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['授業', '課題']
+    tags: ['授業']
   },
   {
     id: 'gemini',
@@ -45,7 +45,7 @@ const LINKS = [
     url: 'https://gemini.google.com/',
     desc: 'Googleの生成AIアシスタント',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['AI', '学習支援']
+    tags: ['AI']
   },
   {
     id: 'meet',
@@ -53,7 +53,7 @@ const LINKS = [
     url: 'https://meet.google.com/',
     desc: 'ブラウザから使えるビデオ会議ツール',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['オンライン授業', '会議']
+    tags: ['会議']
   },
   {
     id: 'teams',
@@ -61,7 +61,7 @@ const LINKS = [
     url: 'https://teams.microsoft.com/',
     desc: 'チャット・ビデオ会議・ファイル共有',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['オンライン授業', '会議']
+    tags: ['会議']
   },
   {
     id: 'zoom',
@@ -69,7 +69,7 @@ const LINKS = [
     url: 'https://zoom.us/',
     desc: 'オンライン授業・ミーティング向けビデオ会議',
     account: { label: 'Zoomアカウント', className: 'badge-zoom' },
-    tags: ['オンライン授業', '会議']
+    tags: ['会議']
   },
   {
     id: 'drive',
@@ -77,7 +77,7 @@ const LINKS = [
     url: 'https://drive.google.com/',
     desc: 'レポート・資料のクラウド保存と共有',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['ファイル', '共有']
+    tags: ['ファイル']
   },
   {
     id: 'youtube',
@@ -85,7 +85,7 @@ const LINKS = [
     url: 'https://www.youtube.com/',
     desc: '録画授業・大学公式動画の視聴',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['動画', '学習']
+    tags: ['授業']
   },
   {
     id: 'wifi',
@@ -93,7 +93,7 @@ const LINKS = [
     url: 'https://link.g.matsuyama-u.ac.jp/wifi',
     desc: 'キャンパス無線LANへの接続手順',
     account: { label: '学籍番号', className: 'badge-gakusei' },
-    tags: ['ネットワーク', '学内']
+    tags: ['ネットワーク']
   },
   {
     id: 'wifi-qa',
@@ -101,7 +101,7 @@ const LINKS = [
     url: 'https://link.g.matsuyama-u.ac.jp/wifi-qa',
     desc: '学内無線LANの接続トラブル時の確認ポイント',
     account: null,
-    tags: ['ネットワーク', 'トラブル']
+    tags: ['サポート']
   },
   {
     id: 'login-help',
@@ -109,7 +109,7 @@ const LINKS = [
     url: 'https://link.g.matsuyama-u.ac.jp/faq',
     desc: 'パスワード再設定・アカウントロック解除の手順',
     account: null,
-    tags: ['トラブル', '認証']
+    tags: ['サポート']
   },
   {
     id: 'qa',
@@ -117,7 +117,7 @@ const LINKS = [
     url: 'https://link.g.matsuyama-u.ac.jp/qa',
     desc: 'ICTサービスに関するよくある質問と回答集',
     account: null,
-    tags: ['トラブル', 'サポート']
+    tags: ['サポート']
   },
   {
     id: 'security',
@@ -125,7 +125,7 @@ const LINKS = [
     url: 'https://link.g.matsuyama-u.ac.jp/security-tips',
     desc: 'ウイルス対策ソフト導入手順・情報セキュリティ対策',
     account: null,
-    tags: ['セキュリティ', 'トラブル']
+    tags: ['セキュリティ']
   },
   {
     id: 'mac-firewall',
@@ -133,7 +133,7 @@ const LINKS = [
     url: 'https://link.g.matsuyama-u.ac.jp/security-tips/mac-firewall',
     desc: 'Macのファイアーウォール設定方法',
     account: null,
-    tags: ['セキュリティ', 'Mac']
+    tags: ['セキュリティ']
   },
   {
     id: 'official-site',
@@ -141,7 +141,7 @@ const LINKS = [
     url: 'https://www.matsuyama-u.ac.jp/',
     desc: '大学公式サイト（学内情報・イベント）',
     account: null,
-    tags: ['公式情報']
+    tags: ['公式']
   },
   {
     id: 'syllabus',
@@ -149,7 +149,7 @@ const LINKS = [
     url: 'https://unipa.matsuyama-u.ac.jp/guestlogin.html',
     desc: '授業の目標・内容・評価方法などを確認',
     account: null,
-    tags: ['授業', '履修']
+    tags: ['授業']
   },
   {
     id: 'faculty',
@@ -157,7 +157,7 @@ const LINKS = [
     url: 'https://syl.matsuyama-u.ac.jp/mtuhp/KgApp',
     desc: '教員の専門分野・研究内容・連絡先を検索',
     account: null,
-    tags: ['授業', '研究']
+    tags: ['授業']
   },
   {
     id: 'opac',
@@ -165,7 +165,7 @@ const LINKS = [
     url: 'https://libweb.matsuyama-u.jp/drupal/',
     desc: '図書館の蔵書・雑誌・電子資料の所在を検索',
     account: null,
-    tags: ['図書館', '資料']
+    tags: ['図書館']
   },
   {
     id: 'sns',
@@ -173,7 +173,7 @@ const LINKS = [
     url: 'https://www.matsuyama-u.ac.jp/guide/pr/sns/',
     desc: '松山大学の公式SNSアカウント一覧',
     account: null,
-    tags: ['公式情報', 'SNS']
+    tags: ['公式']
   }
 ];
 

@@ -84,23 +84,6 @@ a {
   opacity: 0.8;
 }
 
-.hero {
-  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
-  color: #fff;
-  padding: 2rem 1rem 1.5rem;
-  text-align: center;
-}
-
-.hero h2 {
-  font-size: 1.3rem;
-  margin-bottom: 0.4rem;
-}
-
-.hero p {
-  font-size: 0.875rem;
-  opacity: 0.9;
-}
-
 main {
   max-width: 1200px;
   margin: 0 auto;
@@ -193,6 +176,9 @@ main {
   transition: box-shadow var(--transition), transform var(--transition);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .card::before {
@@ -228,6 +214,16 @@ main {
 
 .card-link {
   position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.card-link::after {
+  content: '↗';
+  font-size: 0.8em;
+  line-height: 1;
+  color: var(--color-primary-light);
 }
 
 .card-desc {
@@ -235,6 +231,7 @@ main {
   color: var(--color-text-muted);
   line-height: 1.45;
   margin-bottom: 0.45rem;
+  flex: 1;
 }
 
 .card-meta {
@@ -330,6 +327,14 @@ main {
 @media (min-width: 900px) {
   .card-grid {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .controls {
+    align-items: center;
+  }
+
+  .tag-filter {
+    flex: 1;
   }
 
   .site-title {
