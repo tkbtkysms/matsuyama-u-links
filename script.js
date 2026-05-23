@@ -214,8 +214,10 @@ const TAG_EMOJI = {
 const gridEl = document.getElementById('links-grid');
 const tagFilterEl = document.getElementById('tag-filter');
 const resetClicksEl = document.getElementById('reset-clicks');
+const keywordSearchEl = document.getElementById('keyword-search');
 
 let activeTag = ALL_TAG;
+let activeKeyword = '';
 let clickCounts = loadCounts();
 
 function loadCounts() {
@@ -273,9 +275,21 @@ function getEmojiForLink(link) {
   return TAG_EMOJI[link.tags[0]] || '🔗';
 }
 
+function normalizeText(text) {
+  return String(text).toLocaleLowerCase('ja');
+}
+
 function renderCards() {
+  const normalizedKeyword = normalizeText(activeKeyword.trim());
   const filteredLinks = LINKS
-    .filter((link) => activeTag === ALL_TAG || link.tags.includes(activeTag))
+    .filter((link) => {
+      const matchesTag = activeTag === ALL_TAG || link.tags.includes(activeTag);
+      if (!matchesTag) return false;
+      if (!normalizedKeyword) return true;
+
+      const searchTarget = normalizeText([link.title, link.desc, ...link.tags].join(' '));
+      return searchTarget.includes(normalizedKeyword);
+    })
     .sort((a, b) => {
       const countDiff = getCount(b.id) - getCount(a.id);
       if (countDiff !== 0) return countDiff;
@@ -338,6 +352,11 @@ function renderCards() {
 resetClicksEl.addEventListener('click', () => {
   clickCounts = {};
   saveCounts();
+  renderCards();
+});
+
+keywordSearchEl.addEventListener('input', () => {
+  activeKeyword = keywordSearchEl.value;
   renderCards();
 });
 
