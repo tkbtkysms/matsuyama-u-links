@@ -280,19 +280,7 @@ function renderCards() {
 
     const title = document.createElement('h3');
     title.className = 'card-title';
-
-    const anchor = document.createElement('a');
-    anchor.className = 'card-link';
-    anchor.href = link.url;
-    anchor.target = '_blank';
-    anchor.rel = 'noopener noreferrer';
-    anchor.textContent = `${getEmojiForLink(link)} ${link.title}`;
-    anchor.addEventListener('click', () => {
-      incrementCount(link.id);
-      renderCards();
-    });
-
-    title.appendChild(anchor);
+    title.textContent = `${getEmojiForLink(link)} ${link.title}`;
 
     const desc = document.createElement('p');
     desc.className = 'card-desc';
@@ -310,9 +298,21 @@ function renderCards() {
       meta.appendChild(createBadge('tag-chip', tag));
     });
 
+    const anchor = document.createElement('a');
+    anchor.className = 'card-link-overlay';
+    anchor.href = link.url;
+    anchor.target = '_blank';
+    anchor.rel = 'noopener noreferrer';
+    anchor.setAttribute('aria-label', `${link.title} を開く`);
+    anchor.addEventListener('click', () => {
+      incrementCount(link.id);
+      renderCards();
+    });
+
     card.appendChild(title);
     card.appendChild(desc);
     card.appendChild(meta);
+    card.appendChild(anchor);
     gridEl.appendChild(card);
   });
 }
