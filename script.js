@@ -69,7 +69,7 @@ const LINKS = [
     url: 'https://web.microsoftstream.com/',
     desc: 'Microsoftの動画配信・視聴サービス',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['松大アカウント', '動画']
+    tags: ['動画']
   },
   {
     id: 'online-tools-teacher',
@@ -77,7 +77,7 @@ const LINKS = [
     url: 'https://sites.google.com/g.matsuyama-u.ac.jp/onlinetools-teacher/',
     desc: '遠隔授業で利用するオンラインツールの教員向け案内',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['松大アカウント', '授業']
+    tags: ['授業']
   },
   {
     id: 'online-tools-student',
@@ -85,7 +85,7 @@ const LINKS = [
     url: 'https://sites.google.com/g.matsuyama-u.ac.jp/onlinetools/',
     desc: '遠隔授業で利用するオンラインツールの学生向け案内',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['松大アカウント', '授業']
+    tags: ['授業']
   },
   {
     id: 'zoom',
