@@ -97,6 +97,12 @@ main {
   margin-bottom: 0.75rem;
 }
 
+.top-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
 .keyword-search {
   display: flex;
   flex-direction: column;
@@ -153,6 +159,8 @@ main {
 
 .reset-button {
   width: fit-content;
+  align-self: flex-start;
+  flex-shrink: 0;
   border: 1px solid var(--color-border);
   background: #fff;
   color: var(--color-text-muted);
@@ -339,6 +347,15 @@ main {
 }
 
 @media (min-width: 600px) {
+  .top-controls {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .keyword-search {
+    flex: 1;
+  }
+
   .card-grid {
     grid-template-columns: repeat(2, 1fr);
   }

@@ -19,14 +19,17 @@
   <main id="main">
     <section class="section" aria-label="学内リンク一覧">
       <div class="controls" aria-label="絞り込みコントロール">
-        <div class="keyword-search">
-          <input
-            type="search"
-            id="keyword-search"
-            class="keyword-search-input"
-            placeholder="タグ・タイトル・説明で検索"
-            aria-label="タグ、タイトル、説明でキーワード検索"
-          />
+        <div class="top-controls">
+          <div class="keyword-search">
+            <input
+              type="search"
+              id="keyword-search"
+              class="keyword-search-input"
+              placeholder="タグ・タイトル・説明で検索"
+              aria-label="タグ、タイトル、説明でキーワード検索"
+            />
+          </div>
+          <button type="button" class="reset-button" id="reset-clicks">クリック数をリセット</button>
         </div>
         <div class="tag-filter" id="tag-filter" role="group" aria-label="タグで絞り込み"></div>
         <aside class="tag-guide" aria-label="タグ説明">
@@ -34,7 +37,6 @@
           <p><span class="tag-guide-label">学籍番号</span>：学籍番号アカウントでログインが必要</p>
           <p><span class="tag-guide-label">Zoomアカウント</span>：Zoomアカウントでログインが必要</p>
         </aside>
-        <button type="button" class="reset-button" id="reset-clicks">クリック数をリセット</button>
       </div>
 
       <div class="card-grid" id="links-grid" aria-live="polite"></div>
