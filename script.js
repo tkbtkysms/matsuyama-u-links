@@ -4,28 +4,28 @@ const LINKS = [
     title: 'moodle',
     url: 'https://moodle4.matsuyama-u.ac.jp/moodle/',
     desc: '授業資料・課題提出・小テスト・出欠確認',
-    account: { label: '学籍番号', className: 'badge-gakusei' },
+    account: { label: '松大アカウント', className: 'badge-matsudai' },
     tags: ['授業']
   },
   {
     id: 'unipa-pc',
-    title: 'unipa PC',
+    title: '松大UNIPA（PC）',
     url: 'https://unipa.matsuyama-u.ac.jp/uprx/ShibbolethAuthServlet',
     desc: '履修登録・成績照会・時間割確認（パソコン用）',
-    account: { label: '学籍番号', className: 'badge-gakusei' },
+    account: { label: '松大アカウント', className: 'badge-matsudai' },
     tags: ['履修']
   },
   {
     id: 'unipa-mobile',
-    title: 'unipa mobile',
+    title: '松大UNIPA（モバイル）',
     url: 'https://unipa.matsuyama-u.ac.jp/uprx/MobileShibbolethAuthServle',
     desc: '履修登録・成績照会・時間割確認（スマートフォン用）',
-    account: { label: '学籍番号', className: 'badge-gakusei' },
+    account: { label: '松大アカウント', className: 'badge-matsudai' },
     tags: ['履修']
   },
   {
     id: 'gmail',
-    title: '松山大学Gmail',
+    title: 'Gmail',
     url: 'https://mail.google.com/a/g.matsuyama-u.ac.jp',
     desc: '大学公式メール（@g.matsuyama-u.ac.jp）の送受信',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
@@ -64,6 +64,30 @@ const LINKS = [
     tags: ['会議']
   },
   {
+    id: 'microsoft-stream',
+    title: 'Microsoft Stream',
+    url: 'https://web.microsoftstream.com/',
+    desc: 'Microsoftの動画配信・視聴サービス',
+    account: { label: '松大アカウント', className: 'badge-matsudai' },
+    tags: ['松大アカウント', '動画']
+  },
+  {
+    id: 'online-tools-teacher',
+    title: '遠隔授業用オンラインツール（教員用）',
+    url: 'https://sites.google.com/g.matsuyama-u.ac.jp/onlinetools-teacher/',
+    desc: '遠隔授業で利用するオンラインツールの教員向け案内',
+    account: { label: '松大アカウント', className: 'badge-matsudai' },
+    tags: ['松大アカウント', '授業']
+  },
+  {
+    id: 'online-tools-student',
+    title: '遠隔授業用オンラインツール（学生用）',
+    url: 'https://sites.google.com/g.matsuyama-u.ac.jp/onlinetools/',
+    desc: '遠隔授業で利用するオンラインツールの学生向け案内',
+    account: { label: '松大アカウント', className: 'badge-matsudai' },
+    tags: ['松大アカウント', '授業']
+  },
+  {
     id: 'zoom',
     title: 'Zoom',
     url: 'https://zoom.us/',
@@ -78,14 +102,6 @@ const LINKS = [
     desc: 'レポート・資料のクラウド保存と共有',
     account: { label: '松大アカウント', className: 'badge-matsudai' },
     tags: ['ファイル']
-  },
-  {
-    id: 'youtube',
-    title: 'YouTube（授業動画）',
-    url: 'https://www.youtube.com/',
-    desc: '録画授業・大学公式動画の視聴',
-    account: { label: '松大アカウント', className: 'badge-matsudai' },
-    tags: ['授業']
   },
   {
     id: 'wifi',
@@ -113,7 +129,7 @@ const LINKS = [
   },
   {
     id: 'qa',
-    title: 'Q&A（よくある質問）',
+    title: 'ICT Q&A',
     url: 'https://link.g.matsuyama-u.ac.jp/qa',
     desc: 'ICTサービスに関するよくある質問と回答集',
     account: null,
@@ -190,7 +206,9 @@ const TAG_EMOJI = {
   サポート: '🛟',
   セキュリティ: '🔐',
   公式: '🏫',
-  図書館: '📚'
+  図書館: '📚',
+  松大アカウント: '🪪',
+  動画: '🎬'
 };
 
 const gridEl = document.getElementById('links-grid');
