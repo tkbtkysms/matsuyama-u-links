@@ -187,6 +187,10 @@ main {
 }
 
 .card-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.3;
@@ -197,24 +201,24 @@ main {
   white-space: nowrap;
 }
 
-.card-link {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  max-width: 100%;
-  min-width: 0;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-}
-
-.card-link::after {
+.card-title::after {
   content: '↗';
   font-size: 0.8em;
   line-height: 1;
   color: var(--color-primary-light);
   flex-shrink: 0;
+}
+
+.card-link-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  border-radius: inherit;
+}
+
+.card-link-overlay:focus-visible {
+  outline: 2px solid var(--color-primary-light);
+  outline-offset: -2px;
 }
 
 .card-desc {
